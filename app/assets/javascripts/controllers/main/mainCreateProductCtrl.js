@@ -1,9 +1,5 @@
 var CreateProductCtrl = function($scope, $location, productData){
 
-	// productData.loadProducts(function(data){
-	// 	$scope.data.products = data.products;
-	// });
-
 	$scope.formData = {
     newProductName: '',
     newProductDescription: '',
@@ -21,6 +17,7 @@ var CreateProductCtrl = function($scope, $location, productData){
   $scope.createProduct = function(){
   	console.log($scope.formData);
   	productData.createProduct($scope.formData);
+  	$location.url('/')
   };
 
   $scope.clearProduct = function(){
