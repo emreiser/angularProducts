@@ -1,0 +1,23 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <a href="#" class="brand">Products Demo</a>
+    <ul class="nav pull-right">
+      <li><a ng-click="navNewProduct()">New Product</a></li>
+    </ul>
+  </div>
+</div>
+
+<h1 class="text-center">Create new post</h1>
+<form>
+  <fieldset>
+    <label><strong>Name</strong></label>
+    <input class="form-control" ng-model="formData.newProductName" placeholder="Product name" type="text" maxlength="250"><br>
+    <label><strong>Description</strong></label><br>
+    <textarea class="form-control" style="height: 250px" ng-model="formData.newProductDescription" placeholder="Type product description here..."></textarea><br>
+    <label><srtong>Price</srtong></label><br>
+    <input type="text" ng-model="formData.newProductPrice" class="form-control"></input>
+    <br>
+    <button class="btn btn-primary" ng-click="createProduct()">Add</button>
+    <button class="btn btn-danger pull-right" ng-click="clearProduct()">Clear product</button>
+  </fieldset>
+</form>
